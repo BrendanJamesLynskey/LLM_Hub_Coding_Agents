@@ -102,16 +102,28 @@
 <header class="hero">
     <div class="series-label">LLM Hub &mdash; Coding Agents Internals</div>
     <h1><span class="accent">Coding Agents</span> Internals</h1>
-    <p class="subtitle">How Cursor, Aider and Claude Code understand a repository and apply edits across files &mdash; the heuristics, the diff formats and the architectural differences.</p>
-    <div class="tags"><span class="tag">Cursor</span><span class="tag">Aider</span><span class="tag">Claude Code</span><span class="tag">Tree-Sitter</span><span class="tag">Diffs</span></div>
+    <p class="subtitle">How Cursor, Aider, Claude Code and Codex CLI understand a repository, manage context, use tools and delegate work &mdash; the heuristics, the diff formats, the cache mechanics and the architectural differences.</p>
+    <div class="tags"><span class="tag">Cursor</span><span class="tag">Aider</span><span class="tag">Claude Code</span><span class="tag">Codex CLI</span><span class="tag">Tree-Sitter</span><span class="tag">Diffs</span><span class="tag">Tool Use</span><span class="tag">Subagents</span></div>
 </header>
 <main class="container">
-    <h2>Presentations in This Series</h2>
+    <h2>Foundations &mdash; how the agent reads and edits</h2>
     <ol class="deck-list">
 <li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_01_Repo_Understanding/">Repo Understanding &rarr;</a><div class="desc">ripgrep heuristics that beat embeddings; tree-sitter ASTs; ctags &amp; LSPs; code embeddings (when they help, when they don't); dependency graphs; Aider repo map, Cursor @-references, Claude Code heuristics.</div><div class="meta"><span class="badge live">live</span></div></div></li>
 <li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_02_Edit_Strategies/">Edit Strategies &rarr;</a><div class="desc">Search-replace, unified diff, patch files; multi-file atomicity; context window management; Read/Edit/Write tool design; Aider vs Cursor vs Claude Code architectures; failure recovery.</div><div class="meta"><span class="badge live">live</span></div></div></li>
     </ol>
-    
+
+    <h2>Companion to Sebastian Raschka &mdash; <em>Components of a Coding Agent</em></h2>
+    <div class="callout">
+        <p>A five-deck companion to <a href="https://magazine.sebastianraschka.com/p/components-of-a-coding-agent" target="_blank" rel="noopener">Sebastian Raschka's essay</a>, unpacking each of the six components &mdash; live repo context, prompt-cache reuse, tool access, context bloat, structured session memory, bounded subagents &mdash; with diagrams, code, and interactive visualisations. <strong>Read alongside the article.</strong></p>
+    </div>
+    <ol class="deck-list" style="counter-reset: deck 2;">
+<li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_03_Raschka_Components_Overview/">Components of a Coding Agent &mdash; Overview &rarr;</a><div class="desc">Harness mental model; LLM vs reasoning model vs agent; the four-step <code>observe &rarr; inspect &rarr; choose &rarr; act</code> loop; the six-component architecture; why the harness can outweigh the model.</div><div class="meta"><span class="badge live">live</span></div></div></li>
+<li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_04_Raschka_Repo_Context_And_Caching/">Live Repo Context &amp; Prompt Cache &rarr;</a><div class="desc">Components 1 + 2. Workspace summaries; stable-vs-changing prefix; Anthropic 5-min TTL cache mechanics; interactive cache-cost calculator; CLAUDE.md / AGENTS.md patterns.</div><div class="meta"><span class="badge live">live</span></div></div></li>
+<li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_05_Raschka_Tool_Use/">Tool Access &amp; Bounded Actions &rarr;</a><div class="desc">Component 3. Prose vs bounded actions; tool-call anatomy; the four validation gates; approval modes; tool taxonomy; schema design; interactive approval-gate simulator with adversarial inputs.</div><div class="meta"><span class="badge live">live</span></div></div></li>
+<li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_06_Raschka_Context_Bloat_And_Memory/">Context Bloat &amp; Structured Session Memory &rarr;</a><div class="desc">Components 4 + 5. Clipping, dedup, recency-weighted summarisation; working memory vs full transcript; storage-time vs prompt-time discipline; live context-budget visualiser.</div><div class="meta"><span class="badge live">live</span></div></div></li>
+<li class="deck-card"><div class="num"></div><div class="body"><a class="deck-title" href="https://brendanjameslynskey.github.io/CodingAgents_07_Raschka_Subagents_And_Synthesis/">Bounded Subagents &amp; Synthesis &rarr;</a><div class="desc">Component 6 + closing synthesis. Spawn vs bind; sandboxing &amp; recursion depth; Claude Code vs Codex models; pattern catalogue (research / parallel-edit / review / autonomous slice / planner-executor); interactive subagent-tree explorer; reading list.</div><div class="meta"><span class="badge live">live</span></div></div></li>
+    </ol>
+
 </main>
 
 <footer class="footer">
