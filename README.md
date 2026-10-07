@@ -25,6 +25,10 @@ A five-deck companion to [Sebastian Raschka's essay](https://magazine.sebastianr
 | 06 | [Context Bloat &amp; Session Memory](https://brendanjameslynskey.github.io/CodingAgents_06_Raschka_Context_Bloat_And_Memory/) | live | Components 4 + 5. Clipping, dedup, recency-weighted summarisation; working memory vs full transcript; storage-time vs prompt-time discipline; live context-budget visualiser. |
 | 07 | [Subagents &amp; Synthesis](https://brendanjameslynskey.github.io/CodingAgents_07_Raschka_Subagents_And_Synthesis/) | live | Component 6 + closing synthesis. Spawn vs bind; sandboxing and recursion depth; Claude Code vs Codex models; pattern catalogue (research / parallel-edit / review / autonomous slice / planner-executor); interactive subagent-tree explorer; reading list. |
 
+## Related
+
+**Related site:** [Agent Harnesses Explained](https://agent-harnesses-explained.vercel.app/) ([code](https://github.com/BrendanJamesLynskey/agent-harnesses-explained)) is an interactive companion to this series: the harness components these decks describe (the loop, tool access, repo context and the prompt cache, context bloat and compaction, sub-agents, permissions, hooks and recovery), each animated in one of 10 chapters by a deterministic agent-loop simulator, with the public coding-agent harnesses (Claude Code, Codex CLI, Aider, OpenHands, SWE-agent, mini-SWE-agent) compared in a sourced matrix. Its chapters link back to decks 02–07.
+
 ## Where this fits
 
 Part of the [LLMs hub](https://github.com/BrendanJamesLynskey/LLMs) &mdash; an index of presentation series for AI/LLM engineers.
