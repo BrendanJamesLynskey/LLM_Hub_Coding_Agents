@@ -1,3 +1,7 @@
+<!-- portfolio-strip:start (brief 40) -->
+<sub>**Brendan Lynskey** · [Portfolio home](https://brendanjameslynskey.github.io/) · [Interactive sites](https://brendanjameslynskey.github.io/#sites)</sub>
+<!-- portfolio-strip:end -->
+
 # Coding Agents Internals
 
 How Cursor, Aider, Claude Code and Codex CLI understand a repository, manage context, use tools, and delegate work &mdash; the heuristics, the diff formats, the cache mechanics and the architectural differences.
